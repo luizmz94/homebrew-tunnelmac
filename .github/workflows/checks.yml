@@ -20,6 +20,10 @@ jobs:
         run: |
           mkdir -p "$(brew --repository)/Library/Taps/luizmz94"
           ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/luizmz94/homebrew-tunnelmac"
+      # Homebrew loads casks of third-party taps only once trusted (install and upgrade with
+      # the full name trust it themselves; audit and style do not).
+      - name: Trust
+        run: brew trust --tap luizmz94/tunnelmac
       - name: Style
         run: brew style --cask luizmz94/tunnelmac/tunnelmac
       # Release candidates are GitHub pre-releases: refused by homebrew/cask, fine in this tap.
