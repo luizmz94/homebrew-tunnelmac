@@ -1,13 +1,13 @@
 cask "tunnelmac" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.1.0"
-  sha256 arm:   "1572dc0e43771dd427becad0feb8cf0aefd190c883742ec2060dbee1daa8cc9c",
-         intel: "a6f81b326abfaca154a59ebedfa52b6e27c6803a278ab71d641af5f238b2480d"
+  version "1.3.0"
+  sha256 arm:   "d0fb587a79178d3a8d5500b8422656f57cd612072ad4a534fbb8b85ceb12ee17",
+         intel: "efbd822280ed5c4ab39bb717eac434c35672bac54d4ce47854f085b24da72997"
 
   url "https://github.com/luizmz94/tunnelmac/releases/download/v#{version}/TunnelMac-#{version}-#{arch}.zip"
   name "TunnelMac"
-  desc "Native GUI for openfortivpn, OpenVPN, WireGuard and OpenConnect"
+  desc "Native GUI for openfortivpn, OpenVPN, WireGuard, OpenConnect and snx-rs"
   homepage "https://github.com/luizmz94/tunnelmac"
 
   livecheck do
@@ -63,8 +63,9 @@ cask "tunnelmac" do
 
   caveats <<~EOS
     First use: open TunnelMac and follow the setup guide. Pick the VPN types you
-    use and install only those clients (brew install openfortivpn, openvpn
-    and/or wireguard-go; the guide shows the command), activate its service,
+    use and install only those clients (brew install openfortivpn, openvpn,
+    wireguard-go, openconnect and/or snx-rs; the guide shows the command),
+    activate its service,
     approve it in System Settings and approve each client once.
 
     Updates: TunnelMac offers new versions and installs them itself
