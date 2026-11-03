@@ -1,9 +1,9 @@
 cask "tunnelmac" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.3.0"
-  sha256 arm:   "d0fb587a79178d3a8d5500b8422656f57cd612072ad4a534fbb8b85ceb12ee17",
-         intel: "efbd822280ed5c4ab39bb717eac434c35672bac54d4ce47854f085b24da72997"
+  version "1.3.1"
+  sha256 arm:   "3ffda7a88d92416a128039d168df11c2be33d7026bf81a850e57d10e920f526b",
+         intel: "8210a693b3634e2e6857c1f5fe7f65081d1a4a91ec752ec94b326ec81d354f7f"
 
   url "https://github.com/luizmz94/tunnelmac/releases/download/v#{version}/TunnelMac-#{version}-#{arch}.zip"
   name "TunnelMac"
